@@ -1,5 +1,6 @@
 package com.compass.pb.mule.testfour.service;
 
+import com.compass.pb.mule.testfour.client.BankPaymentClient;
 import com.compass.pb.mule.testfour.domain.PaymentRequest;
 import com.compass.pb.mule.testfour.domain.PaymentResponse;
 import com.compass.pb.mule.testfour.domain.pbbank.BankPaymentResponse;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -29,7 +31,7 @@ class PaymentServiceTest {
     private PaymentService service;
 
     @MockBean
-    private BankPaymentService bankService;
+    private BankPaymentClient bankClient;
 
     @MockBean
     private PaymentRepository paymentRepository;
@@ -46,7 +48,7 @@ class PaymentServiceTest {
         PaymentRequest request = MockUtils.getPaymentRequestValid();
         BankPaymentResponse bankResponse = MockUtils.getBankPaymentResponseAproved();
         PaymentEntity paymentEntity = MockUtils.getPaymentEntity();
-        when(bankService.processPaymentAtBank(any())).thenReturn(bankResponse);
+        when(bankClient.sendCreditCardPayment(any())).thenReturn(ResponseEntity.ok(bankResponse));
         when(paymentRepository.save(any())).thenReturn(paymentEntity);
 
         PaymentResponse result = service.proccessNewPayment(request);
