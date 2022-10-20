@@ -1,0 +1,27 @@
+{
+  "cpf": "12345678910",
+  "items": [
+    {
+      "item": "Item 1",
+      "value": 44.6,
+      "qty": 10
+    },
+    {
+      "item": "Item 2",
+      "value": 55.9,
+      "qty": 2
+    }
+  ],
+  "shipping": 9.99,
+  "discount": 4.46,
+  "payment_type": "CREDIT_CARD",
+  "currency_type": "BRL",
+  "payment": {
+    "card_number": "12345667878979",
+    "cardholder_name": "JOAO DA SILVA",
+    "security_code": "123",
+    "expiration_month": 12,
+    "expiration_year": 25,
+    "brand": "MASTERCARD"
+  }
+}

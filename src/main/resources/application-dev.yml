@@ -1,0 +1,24 @@
+# perfil usando como banco o H2
+spring:
+  application:
+    name: "@project.name@"
+  sql:
+    init:
+      platform: h2s
+  datasource:
+    url: jdbc:h2:mem:statesDB
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+logging:
+  level:
+    com.compass.pb.mule.testfour: DEBUG

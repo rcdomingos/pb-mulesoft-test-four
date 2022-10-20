@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: "@project.name@"
+  profiles:
+    active: dev
+
+
+app-custom:
+  api-key: 91452c37-e343-4738-a94a-be113875cb2b
+  client-id: client_id_mulesoft
+  seller-id: 7be8890e-f4da-40c2-975e-0b9a87c5ad69
+  bank-url: https://pb-getway-payment.herokuapp.com/v1

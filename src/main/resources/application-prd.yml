@@ -1,0 +1,14 @@
+# perfil usando como banco o MySQL
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/pb-mulesoft
+    password: root
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+logging:
+  level:
+    com.compass.pb.mule.testfour: INFO

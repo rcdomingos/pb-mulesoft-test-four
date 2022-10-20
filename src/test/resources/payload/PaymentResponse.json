@@ -1,0 +1,7 @@
+{
+  "order_id": "12345678910",
+  "total": 234.9,
+  "payment_id": "1c3a1fec-9c4b-4b86-a2a2-ff537d29d3c7",
+  "payment_status": "APPROVED",
+  "message": "transaction approved"
+}

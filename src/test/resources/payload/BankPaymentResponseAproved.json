@@ -1,0 +1,14 @@
+{
+  "payment_id": "c088394d-1087-4a6b-88a3-955cd4f56504",
+  "seller_id": "6eb2412c-165a-41cd-b1d9-76c575d70a28",
+  "transaction_amount": 67.9,
+  "currency": "BRL",
+  "status": "APPROVED",
+  "received_at": "2022-10-14T14:41:26.883349",
+  "authorization": {
+    "authorization_code": 1665758486883,
+    "authorized_at": "2022-10-14T14:41:36.883357",
+    "reason_code": 0,
+    "reason_message": "transaction approved"
+  }
+}
